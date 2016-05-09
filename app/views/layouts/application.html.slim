@@ -1,0 +1,34 @@
+doctype html
+html[lang="en"]
+  head
+    meta[charset="utf-8"]
+    meta[content="IE=edge" http-equiv="X-UA-Compatible"]
+    meta[content="width=device-width, initial-scale=1" name="viewport"]
+    title
+      | ParcelAide
+    link[href="http://fonts.googleapis.com/css?family=Roboto:500,900,100,300,700,400" rel="stylesheet" type="text/css"]
+    link[href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet"]
+    = stylesheet_link_tag    'application', media: 'all'
+    = javascript_include_tag 'application'
+    = csrf_meta_tags
+  body
+    header
+      nav
+        .logo
+          = link_to "javascript:void(0)"
+            = image_tag "logo.svg"
+        .logo2
+          = link_to "javascript:void(0)"
+            = image_tag "logo2.svg"
+        ul
+          li= link_to "Home", "javascript:void(0)"
+          li= link_to "Services", "javascript:void(0)"
+          li= link_to "Support", "javascript:void(0)"
+      nav.login
+        ul
+          li= link_to "New User", "javascript:void(0)"
+          li
+            | |
+          li= link_to "Log In", "javascript:void(0)"
+    = yield
+    script[src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"]
